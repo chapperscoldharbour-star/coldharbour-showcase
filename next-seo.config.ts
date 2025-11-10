@@ -17,6 +17,7 @@ const defaultSeo = {
         width: 1200,
         height: 630,
         alt: "Coldharbour Studio",
+        type: undefined as string | undefined,
       },
     ],
   },
