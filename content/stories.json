@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "montague-ai-gallery",
+    "title": "Montague Pianos AI Gallery",
+    "category": "AI Imagery",
+    "summary": "Crafted a library of recital scenes and kinetic stills for montaguepianos.co.uk, balancing heritage craft with cinematic lighting.",
+    "media": "/media/critzo__a_cool_pianist_--ar_169_--v_7_4c25900c-1ef1-448b-bb9f-4ae3c81c180f_2.png",
+    "url": "https://www.montaguepianos.co.uk",
+    "testimonial": {
+      "quote": "Coldharbour gave us a gallery that finally feels like our sound.",
+      "author": "Tim Montague",
+      "role": "Director, Montague Pianos"
+    }
+  },
+  {
+    "slug": "piano-tuning-agent",
+    "title": "Piano Tuning Concierge",
+    "category": "Chatbots",
+    "summary": "Built a warm concierge that routes players across pianotuningherts.co.uk, handling voicing questions and booking flow in one chat.",
+    "media": "/media/critzo__sound_waves_with_an_unhappy_chid_face_and_a_piano_sil_4e663fa1-0e76-4c4a-af37-0eda8bde2ac9_0.png",
+    "url": "https://www.pianotuningherts.co.uk",
+    "testimonial": {
+      "quote": "Response times dropped to seconds and bookings stayed fully human.",
+      "author": "Lizzie Hardy",
+      "role": "Studio Manager"
+    }
+  },
+  {
+    "slug": "montague-chat",
+    "title": "Concert Chat Companion",
+    "category": "Story Engines",
+    "summary": "chat.montaguepianos.co.uk now guides visitors with live narrative drops, blending voice notes, copy decks, and GSAP pinning.",
+    "media": "/media/critzo__pixar__--ar_169_--raw_--profile_cpsahru_--stylize_800_fd5ecf5e-8fd3-45f5-ba07-c88f8ee645ec_3.png",
+    "url": "https://chat.montaguepianos.co.uk",
+    "testimonial": {
+      "quote": "Feels like a resident maestro welcoming every guest.",
+      "author": "Helena Ford",
+      "role": "Experience Lead"
+    }
+  }
+]

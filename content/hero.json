@@ -1,0 +1,29 @@
+{
+  "eyebrow": "Coldharbour Studio",
+  "title": "Spatial stories for bold AI brands",
+  "description": "Immersive imagery, conversational companions, and live narrative layers for pianos, ateliers, and research labs ready to feel more cinematic.",
+  "primaryCta": { "label": "Explore programmes", "href": "/programmes" },
+  "secondaryCta": { "label": "Talk to Coldharbour", "href": "/contact" },
+  "stats": [
+    { "label": "AI artworks shipped", "value": "180+" },
+    { "label": "Conversational launches", "value": "12" },
+    { "label": "Realtime story pilots", "value": "5" }
+  ],
+  "narrative": [
+    {
+      "title": "AI Imagery",
+      "body": "Gallery-grade visuals styled for Montague Pianos and modern luxury partners, keeping every drop coherent across site, socials, and stage.",
+      "media": "/media/critzo__A_hero_image_for_a_website_background_hero_section._T_626a29c8-33f1-4e27-9cc9-00a3ef28c30e_0.png"
+    },
+    {
+      "title": "Conversational Companions",
+      "body": "Chatbots that speak in your cadence, from concert booking assistants to archive docents guiding collectors through living catalogues.",
+      "media": "/media/critzo__a_serious_pianst_--ar_169_--v_7_1eff4ab6-dae1-46fb-a94c-dd9d0ce6eab5_1.png"
+    },
+    {
+      "title": "Story Engines",
+      "body": "Scroll-triggered essays and GSAP theatre that keep visitors inside a single flowing narrative, blending copy, motion, and score.",
+      "media": "/media/critzo__random_animation_style_--ar_169_--raw_--profile_cpsah_3f295c59-68f7-4877-afc7-2ef1f9a59918_1.png"
+    }
+  ]
+}

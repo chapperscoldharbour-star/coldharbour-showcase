@@ -1,0 +1,17 @@
+Create a Next.js 15 (App Router) + TypeScript project with Tailwind. Include Framer Motion, GSAP + ScrollTrigger, and @studio-freight/lenis.
+	•	Pages: / (hero + narrative sections), /about, /programmes, /stories, /contact.
+	•	Components: Header (transparent → solid on scroll), Footer, Section (full-viewport, content centered), MarqueeBand, MediaGrid, TestimonialSlider (Swiper).
+	•	Behaviour:
+	•	Smooth scrolling via Lenis (SSR-safe).
+	•	Scroll-reveals (fade/slide) using Framer Motion variants.
+	•	One “pinned” section (copy deck on left, image on right) using GSAP ScrollTrigger with pin + scrub.
+	•	Lazy-load images (Next/Image) and intersection-based motion triggers.
+	•	Fonts: set up next/font for two families: Display (e.g. ‘Playfair Display’ or swap to the exact family I’ll provide), Sans UI (e.g. ‘Inter’). Create a typography.css with CSS variables so I can switch fonts easily.
+	•	SEO: next-seo default config and per-page overrides.
+	•	Add a simple CMS stub (JSON files under content/) for hero copy, programmes, and stories; load at build time (no external CMS yet).
+	•	Provide scripts: dev, build, start, lint.
+	•	Produce production-ready code with accessible landmarks, reduced-motion fallbacks, and no layout shift.
+
+This is a portfolio site for "Coldharbour"
+
+It will be showcasing AI Imagery, Chatbots, and my AI projects. 

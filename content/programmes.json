@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "imagery-sprint",
+    "title": "AI Imagery Sprint",
+    "tagline": "Lookbook-ready visuals, graded for performance.",
+    "duration": "2-week cadence",
+    "focus": [
+      "Mood research with live boards",
+      "Multi-format render pipeline",
+      "Delivery kit for web + socials"
+    ],
+    "link": { "label": "See stories", "href": "/stories#imagery" }
+  },
+  {
+    "slug": "chatbot-studio",
+    "title": "Chatbot Studio",
+    "tagline": "Conversational agents that stay on-brand.",
+    "duration": "4-week studio",
+    "focus": [
+      "Persona writing + guardrails",
+      "Realtime knowledge sync",
+      "Voice + interface choreography"
+    ],
+    "link": { "label": "Meet a guide", "href": "/stories#chatbots" }
+  },
+  {
+    "slug": "story-lab",
+    "title": "Story Lab",
+    "tagline": "Pinned theatre for launches and showcases.",
+    "duration": "6-week residency",
+    "focus": [
+      "Narrative mapping",
+      "GSAP + ScrollTrigger staging",
+      "Lenis-scrolled microsite build"
+    ],
+    "link": { "label": "Book the lab", "href": "/contact" }
+  }
+]
