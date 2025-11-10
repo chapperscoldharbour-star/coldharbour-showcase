@@ -30,6 +30,7 @@ const defaultSeo = {
       content: "#05060a",
     },
   ],
+  facebook: undefined as { appId?: string } | undefined,
 };
 
 export default defaultSeo;
