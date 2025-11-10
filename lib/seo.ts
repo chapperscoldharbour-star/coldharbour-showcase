@@ -2,11 +2,32 @@ import type { Metadata } from "next";
 import defaultSeo from "@/next-seo.config";
 
 type SeoConfig = typeof defaultSeo;
+
+type MetaTag = {
+  content: string;
+  name?: string;
+  property?: string;
+  httpEquiv?: string;
+};
+
+type LinkTag = {
+  rel: string;
+  href: string;
+  hrefLang?: string;
+  media?: string;
+  sizes?: string;
+  type?: string;
+  as?: string;
+  crossOrigin?: string;
+};
+
 type SeoMerged = SeoConfig & {
   title?: string;
   facebook?: {
     appId?: string;
   };
+  additionalMetaTags?: MetaTag[];
+  additionalLinkTags?: LinkTag[];
 };
 type SeoOverrides = Partial<SeoMerged>;
 
@@ -51,7 +72,6 @@ function mergeSeo(overrides?: SeoOverrides): SeoMerged {
   };
 }
 
-type MetaTag = NonNullable<SeoMerged["additionalMetaTags"]>[number];
 type OpenGraphImage = NonNullable<
   NonNullable<SeoMerged["openGraph"]>["images"]
 >[number];
