@@ -19,7 +19,7 @@ export function LenisProvider({ children }: { children: ReactNode }) {
         duration: 1.3,
         lerp: 0.1,
         smoothWheel: true,
-        smoothTouch: false,
+        touchMultiplier: 1,
       }) as unknown as { raf: (time: number) => void; destroy: () => void };
 
       const raf = (time: number) => {
