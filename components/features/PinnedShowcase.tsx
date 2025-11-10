@@ -11,7 +11,7 @@ export function PinnedShowcase() {
 
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let ctx: import("gsap").Context | null = null;
+    let ctx: { revert: () => void } | null = null;
 
     if (prefersReduced.matches) {
       return undefined;
