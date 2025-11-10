@@ -46,6 +46,9 @@ function mergeSeo(overrides?: SeoOverrides): SeoConfig {
 }
 
 type MetaTag = NonNullable<SeoConfig["additionalMetaTags"]>[number];
+type OpenGraphImage = NonNullable<
+  NonNullable<SeoConfig["openGraph"]>["images"]
+>[number];
 
 function metaTagsToOther(metaTags?: SeoConfig["additionalMetaTags"]) {
   if (!metaTags?.length) return undefined;
@@ -101,7 +104,7 @@ export function buildMetadata(
             seo.openGraph.siteName ??
             seo.openGraph.site_name ??
             metadataBaseUrl.hostname,
-          images: seo.openGraph.images?.map((image) => ({
+          images: seo.openGraph.images?.map((image: OpenGraphImage) => ({
             url: image.url,
             width: image.width,
             height: image.height,
