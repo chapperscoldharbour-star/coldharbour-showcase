@@ -75,6 +75,7 @@ function mergeSeo(overrides?: SeoOverrides): SeoMerged {
 type OpenGraphImage = NonNullable<
   NonNullable<SeoMerged["openGraph"]>["images"]
 >[number];
+type OpenGraphType = NonNullable<Metadata["openGraph"]>["type"];
 
 function metaTagsToOther(metaTags?: SeoMerged["additionalMetaTags"]) {
   if (!metaTags?.length) return undefined;
@@ -137,7 +138,7 @@ export function buildMetadata(
             alt: image.alt,
             type: image.type,
           })),
-          type: seo.openGraph.type ?? "website",
+          type: (seo.openGraph.type as OpenGraphType | undefined) ?? "website",
         }
       : undefined,
     twitter: seo.twitter
