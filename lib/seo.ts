@@ -45,16 +45,21 @@ function mergeSeo(overrides?: SeoOverrides): SeoConfig {
   };
 }
 
+type MetaTag = NonNullable<SeoConfig["additionalMetaTags"]>[number];
+
 function metaTagsToOther(metaTags?: SeoConfig["additionalMetaTags"]) {
   if (!metaTags?.length) return undefined;
 
-  return metaTags.reduce<Record<string, string>>((acc, tag) => {
-    const key = tag.name ?? tag.property ?? tag.httpEquiv;
-    if (key) {
-      acc[key] = tag.content;
-    }
-    return acc;
-  }, {});
+  return metaTags.reduce<Record<string, string>>(
+    (acc: Record<string, string>, tag: MetaTag) => {
+      const key = tag.name ?? tag.property ?? tag.httpEquiv;
+      if (key) {
+        acc[key] = tag.content;
+      }
+      return acc;
+    },
+    {}
+  );
 }
 
 function resolveCanonical(canonical?: string, path?: string) {
