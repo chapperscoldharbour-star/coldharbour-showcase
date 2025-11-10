@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import defaultSeo from "@/next-seo.config";
 
 type SeoConfig = typeof defaultSeo;
-type SeoMerged = SeoConfig & { title?: string };
+type SeoMerged = SeoConfig & {
+  title?: string;
+  facebook?: {
+    appId?: string;
+  };
+};
 type SeoOverrides = Partial<SeoMerged>;
 
 const FALLBACK_CANONICAL = defaultSeo.canonical ?? "https://coldharbour.studio";
