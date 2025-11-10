@@ -75,7 +75,9 @@ function mergeSeo(overrides?: SeoOverrides): SeoMerged {
 type OpenGraphImage = NonNullable<
   NonNullable<SeoMerged["openGraph"]>["images"]
 >[number];
-type OpenGraphType = NonNullable<Metadata["openGraph"]>["type"];
+type ExtractOpenGraphType<T> = T extends { type?: infer K } ? K : never;
+type OpenGraphTypeBase = ExtractOpenGraphType<NonNullable<Metadata["openGraph"]>>;
+type OpenGraphType = OpenGraphTypeBase extends never ? string : OpenGraphTypeBase;
 
 function metaTagsToOther(metaTags?: SeoMerged["additionalMetaTags"]) {
   if (!metaTags?.length) return undefined;
