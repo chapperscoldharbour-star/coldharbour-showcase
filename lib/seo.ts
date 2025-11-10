@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import defaultSeo from "@/next-seo.config";
 
 type SeoConfig = typeof defaultSeo;
-type SeoOverrides = Partial<SeoConfig>;
+type SeoMerged = SeoConfig & { title?: string };
+type SeoOverrides = Partial<SeoMerged>;
 
 const FALLBACK_CANONICAL = defaultSeo.canonical ?? "https://coldharbour.studio";
 
@@ -15,7 +16,7 @@ function toUrl(value?: string) {
   return new URL(FALLBACK_CANONICAL);
 }
 
-function mergeSeo(overrides?: SeoOverrides): SeoConfig {
+function mergeSeo(overrides?: SeoOverrides): SeoMerged {
   if (!overrides) {
     return { ...defaultSeo };
   }
@@ -45,12 +46,12 @@ function mergeSeo(overrides?: SeoOverrides): SeoConfig {
   };
 }
 
-type MetaTag = NonNullable<SeoConfig["additionalMetaTags"]>[number];
+type MetaTag = NonNullable<SeoMerged["additionalMetaTags"]>[number];
 type OpenGraphImage = NonNullable<
-  NonNullable<SeoConfig["openGraph"]>["images"]
+  NonNullable<SeoMerged["openGraph"]>["images"]
 >[number];
 
-function metaTagsToOther(metaTags?: SeoConfig["additionalMetaTags"]) {
+function metaTagsToOther(metaTags?: SeoMerged["additionalMetaTags"]) {
   if (!metaTags?.length) return undefined;
 
   return metaTags.reduce<Record<string, string>>(
