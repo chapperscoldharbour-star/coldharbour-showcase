@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import type { NextSeoProps } from "next-seo";
-
 import defaultSeo from "@/next-seo.config";
+
+type SeoConfig = typeof defaultSeo;
+type SeoOverrides = Partial<SeoConfig>;
 
 const FALLBACK_CANONICAL = defaultSeo.canonical ?? "https://coldharbour.studio";
 
@@ -14,7 +15,7 @@ function toUrl(value?: string) {
   return new URL(FALLBACK_CANONICAL);
 }
 
-function mergeSeo(overrides?: NextSeoProps): NextSeoProps {
+function mergeSeo(overrides?: SeoOverrides): SeoConfig {
   if (!overrides) {
     return { ...defaultSeo };
   }
@@ -44,7 +45,7 @@ function mergeSeo(overrides?: NextSeoProps): NextSeoProps {
   };
 }
 
-function metaTagsToOther(metaTags?: NextSeoProps["additionalMetaTags"]) {
+function metaTagsToOther(metaTags?: SeoConfig["additionalMetaTags"]) {
   if (!metaTags?.length) return undefined;
 
   return metaTags.reduce<Record<string, string>>((acc, tag) => {
@@ -69,7 +70,7 @@ function resolveCanonical(canonical?: string, path?: string) {
 }
 
 export function buildMetadata(
-  overrides?: NextSeoProps,
+  overrides?: SeoOverrides,
   path?: string
 ): Metadata {
   const seo = mergeSeo(overrides);
