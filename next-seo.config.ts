@@ -30,6 +30,16 @@ const defaultSeo = {
       content: "#05060a",
     },
   ],
+  additionalLinkTags: undefined as
+    | {
+        rel: string;
+        href: string;
+        hrefLang?: string;
+        media?: string;
+        sizes?: string;
+        type?: string;
+      }[]
+    | undefined,
   facebook: undefined as { appId?: string } | undefined,
 };
 
