@@ -1,6 +1,4 @@
-import type { DefaultSeoProps } from "next-seo";
-
-const defaultSeo: DefaultSeoProps = {
+const defaultSeo = {
   titleTemplate: "%s | Coldharbour",
   defaultTitle: "Coldharbour Studio",
   description:
