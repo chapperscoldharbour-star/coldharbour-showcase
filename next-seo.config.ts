@@ -11,6 +11,7 @@ const defaultSeo = {
       "Immersive AI imagery, conversational agents, and narrative websites built with motion craft and care.",
     siteName: "Coldharbour",
     site_name: undefined as string | undefined,
+    type: undefined as string | undefined,
     images: [
       {
         url: "https://coldharbour.studio/og.jpg",
